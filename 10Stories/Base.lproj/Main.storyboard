@@ -1,25 +1,369 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oYX-Uh-CiD">
+                                <rect key="frame" x="20" y="164" width="148" height="129"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="95X-C2-tab" appends="YES" id="j8D-f2-D6h"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHh-6o-Tcm">
+                                <rect key="frame" x="20" y="326" width="146" height="128"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4b7-vC-2nN" appends="YES" id="dwp-KE-5ca"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oXj-FN-3ya">
+                                <rect key="frame" x="20" y="20" width="159" height="117"/>
+                                <animations/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="s74-Aa-zbs" appends="YES" id="mzI-B3-36y"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outletCollection property="books" destination="oXj-FN-3ya" id="onp-6A-Jct"/>
+                        <outletCollection property="books" destination="oYX-Uh-CiD" id="yDL-P7-lt0"/>
+                        <outletCollection property="books" destination="SHh-6o-Tcm" id="oV9-tr-k5F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="s74-Aa-zbs">
+                    <connections>
+                        <segue destination="rRx-tm-gw5" kind="show" identifier="story1" id="yTf-9h-0FN"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="95X-C2-tab">
+                    <connections>
+                        <segue destination="rRx-tm-gw5" kind="show" identifier="story2" id="k0g-dW-ybf"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="4b7-vC-2nN">
+                    <connections>
+                        <segue destination="rRx-tm-gw5" kind="show" identifier="story3" id="Err-Ux-g3l"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="235" y="211"/>
+        </scene>
+        <!--Story View Controller-->
+        <scene sceneID="XdL-D3-QZn">
+            <objects>
+                <viewController id="rRx-tm-gw5" customClass="StoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5iX-8L-M6D"/>
+                        <viewControllerLayoutGuide type="bottom" id="ohl-De-nnW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5kV-7K-goO">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30e-eM-5wa">
+                                <rect key="frame" x="20" y="28" width="728" height="41"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <string key="text">The Information for story should a appear right here in this label. This is just to hold space. It is supposed to be 3 lines to be able to replace a paragraph</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="eY4-ON-b3u" appends="YES" id="7rd-r0-X56"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BA-uS-V6X">
+                                <rect key="frame" x="20" y="77" width="728" height="41"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <string key="text">The Information for story should a appear right here in this label. This is just to hold space. It is supposed to be 3 lines to be able to replace a paragraph</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5FO-YE-k0m" appends="YES" id="Mqc-GP-345"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFp-qQ-AJH">
+                                <rect key="frame" x="20" y="126" width="728" height="41"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <string key="text">The Information for story should a appear right here in this label. This is just to hold space. It is supposed to be 3 lines to be able to replace a paragraph</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ZhE-nG-McO" appends="YES" id="jD0-xd-afN"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHr-8u-tc9">
+                                <rect key="frame" x="20" y="175" width="728" height="41"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <string key="text">The Information for story should a appear right here in this label. This is just to hold space. It is supposed to be 3 lines to be able to replace a paragraph</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="haj-kz-O6M" appends="YES" id="1dE-dY-qjy"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGr-85-bwP">
+                                <rect key="frame" x="20" y="224" width="728" height="41"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <string key="text">The Information for story should a appear right here in this label. This is just to hold space. It is supposed to be 3 lines to be able to replace a paragraph</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="q6s-67-Dhq" appends="YES" id="tft-ux-u8G"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0r-pm-avb">
+                                <rect key="frame" x="20" y="273" width="728" height="41"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <string key="text">The Information for story should a appear right here in this label. This is just to hold space. It is supposed to be 3 lines to be able to replace a paragraph</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jVq-4G-94g" appends="YES" id="yJ3-fS-e5l"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7l-bA-jtn">
+                                <rect key="frame" x="20" y="322" width="728" height="41"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <string key="text">The Information for story should a appear right here in this label. This is just to hold space. It is supposed to be 3 lines to be able to replace a paragraph</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ktF-7A-GyY" appends="YES" id="VI5-eG-yG9"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZW-9p-8Ju">
+                                <rect key="frame" x="20" y="371" width="728" height="41"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <string key="text">The Information for story should a appear right here in this label. This is just to hold space. It is supposed to be 3 lines to be able to replace a paragraph</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dgE-II-a4X" appends="YES" id="bgF-GU-MD1"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhd-k4-bHn">
+                                <rect key="frame" x="20" y="420" width="728" height="41"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <string key="text">The Information for story should a appear right here in this label. This is just to hold space. It is supposed to be 3 lines to be able to replace a paragraph</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ibv-DA-S0y" appends="YES" id="0MD-Yf-ER2"/>
+                                </connections>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39r-un-8sG">
+                                <rect key="frame" x="237" y="927" width="447" height="44"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="➤"/>
+                                <connections>
+                                    <action selector="showNext:" destination="rRx-tm-gw5" eventType="touchUpInside" id="l9u-bT-O1d"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" text="The Information for story should a appear right here in this label. This is just to hold space." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVy-XM-x57">
+                                <rect key="frame" x="20" y="518" width="728" height="377"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fBU-6C-7Vf" appends="YES" id="fQx-qs-LFf"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Done" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RX6-7I-NU3">
+                                <rect key="frame" x="87" y="927" width="46" height="44"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="REo-lV-VVY" appends="YES" id="Ju0-Oj-u0W"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRa-Af-cXi">
+                                <rect key="frame" x="20" y="469" width="728" height="41"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <string key="text">The Information for story should a appear right here in this label. This is just to hold space. It is supposed to be 3 lines to be able to replace a paragraph</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="81Y-H8-Kml" appends="YES" id="Qsc-f5-089"/>
+                                </connections>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="30e-eM-5wa" firstAttribute="top" secondItem="5iX-8L-M6D" secondAttribute="bottom" constant="8" id="0cm-vL-jx7"/>
+                            <constraint firstItem="39r-un-8sG" firstAttribute="leading" secondItem="RX6-7I-NU3" secondAttribute="trailing" constant="104" id="2e0-yr-H4E"/>
+                            <constraint firstItem="bGr-85-bwP" firstAttribute="top" secondItem="GHr-8u-tc9" secondAttribute="bottom" constant="8" id="2eo-gI-H16"/>
+                            <constraint firstItem="1BA-uS-V6X" firstAttribute="top" secondItem="30e-eM-5wa" secondAttribute="bottom" constant="8" id="5sc-BB-RYf"/>
+                            <constraint firstItem="GHr-8u-tc9" firstAttribute="leading" secondItem="5kV-7K-goO" secondAttribute="leadingMargin" id="6Uz-N7-Z3R"/>
+                            <constraint firstItem="1BA-uS-V6X" firstAttribute="leading" secondItem="5kV-7K-goO" secondAttribute="leading" constant="20" id="8NK-GE-SJY"/>
+                            <constraint firstItem="39r-un-8sG" firstAttribute="leading" secondItem="RX6-7I-NU3" secondAttribute="trailing" constant="104" id="BEo-KW-iYx"/>
+                            <constraint firstItem="OVy-XM-x57" firstAttribute="trailing" secondItem="5kV-7K-goO" secondAttribute="trailingMargin" id="BGh-cy-gET"/>
+                            <constraint firstItem="yFp-qQ-AJH" firstAttribute="leading" secondItem="5kV-7K-goO" secondAttribute="leadingMargin" id="EPj-1N-DZ3"/>
+                            <constraint firstItem="hZW-9p-8Ju" firstAttribute="leading" secondItem="5kV-7K-goO" secondAttribute="leadingMargin" id="F6c-Cv-ZVX"/>
+                            <constraint firstItem="yFp-qQ-AJH" firstAttribute="trailing" secondItem="5kV-7K-goO" secondAttribute="trailingMargin" id="H8s-ho-3Va"/>
+                            <constraint firstItem="yRa-Af-cXi" firstAttribute="trailing" secondItem="5kV-7K-goO" secondAttribute="trailingMargin" id="Hcv-hj-hOi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="39r-un-8sG" secondAttribute="trailing" constant="64" id="Iuc-I1-vXA"/>
+                            <constraint firstItem="OVy-XM-x57" firstAttribute="top" secondItem="yRa-Af-cXi" secondAttribute="bottom" constant="8" id="KRd-gX-yem"/>
+                            <constraint firstItem="f0r-pm-avb" firstAttribute="trailing" secondItem="5kV-7K-goO" secondAttribute="trailingMargin" id="LPD-L0-qw3"/>
+                            <constraint firstAttribute="trailing" secondItem="1BA-uS-V6X" secondAttribute="trailing" constant="20" id="MQ6-al-aQB"/>
+                            <constraint firstItem="Nhd-k4-bHn" firstAttribute="trailing" secondItem="5kV-7K-goO" secondAttribute="trailingMargin" id="MuO-pK-fci"/>
+                            <constraint firstItem="GHr-8u-tc9" firstAttribute="trailing" secondItem="5kV-7K-goO" secondAttribute="trailingMargin" id="Na8-Dc-zQT"/>
+                            <constraint firstItem="f0r-pm-avb" firstAttribute="top" secondItem="bGr-85-bwP" secondAttribute="bottom" constant="8" id="SIQ-qX-jai"/>
+                            <constraint firstItem="bGr-85-bwP" firstAttribute="trailing" secondItem="5kV-7K-goO" secondAttribute="trailingMargin" id="U9y-zl-s7c"/>
+                            <constraint firstItem="yRa-Af-cXi" firstAttribute="top" secondItem="Nhd-k4-bHn" secondAttribute="bottom" constant="8" id="Uhq-oH-ASa"/>
+                            <constraint firstItem="OVy-XM-x57" firstAttribute="leading" secondItem="5kV-7K-goO" secondAttribute="leadingMargin" id="UxO-T6-UBL"/>
+                            <constraint firstItem="G7l-bA-jtn" firstAttribute="top" secondItem="f0r-pm-avb" secondAttribute="bottom" constant="8" id="V4v-cg-fW3"/>
+                            <constraint firstItem="GHr-8u-tc9" firstAttribute="top" secondItem="yFp-qQ-AJH" secondAttribute="bottom" constant="8" id="Yik-hg-kRc"/>
+                            <constraint firstItem="G7l-bA-jtn" firstAttribute="trailing" secondItem="5kV-7K-goO" secondAttribute="trailingMargin" id="b4l-e6-Mnx"/>
+                            <constraint firstItem="hZW-9p-8Ju" firstAttribute="trailing" secondItem="5kV-7K-goO" secondAttribute="trailingMargin" id="biJ-0f-DEX"/>
+                            <constraint firstItem="RX6-7I-NU3" firstAttribute="top" secondItem="OVy-XM-x57" secondAttribute="bottom" constant="32" id="d9X-Dc-itx"/>
+                            <constraint firstItem="Nhd-k4-bHn" firstAttribute="leading" secondItem="5kV-7K-goO" secondAttribute="leadingMargin" id="d9Z-Rz-yYy"/>
+                            <constraint firstItem="hZW-9p-8Ju" firstAttribute="top" secondItem="G7l-bA-jtn" secondAttribute="bottom" constant="8" id="eR8-ri-iKT"/>
+                            <constraint firstItem="ohl-De-nnW" firstAttribute="top" secondItem="39r-un-8sG" secondAttribute="bottom" constant="53" id="eXx-1u-uYA"/>
+                            <constraint firstItem="RX6-7I-NU3" firstAttribute="leading" secondItem="5kV-7K-goO" secondAttribute="leadingMargin" constant="67" id="foy-wF-9Az"/>
+                            <constraint firstItem="f0r-pm-avb" firstAttribute="leading" secondItem="5kV-7K-goO" secondAttribute="leadingMargin" id="gLU-2S-1cL"/>
+                            <constraint firstItem="yFp-qQ-AJH" firstAttribute="top" secondItem="1BA-uS-V6X" secondAttribute="bottom" constant="8" id="gZ1-0N-T63"/>
+                            <constraint firstAttribute="trailing" secondItem="30e-eM-5wa" secondAttribute="trailing" constant="20" id="gdR-G2-TTu"/>
+                            <constraint firstItem="bGr-85-bwP" firstAttribute="leading" secondItem="5kV-7K-goO" secondAttribute="leadingMargin" id="ieP-nT-mPP"/>
+                            <constraint firstItem="Nhd-k4-bHn" firstAttribute="top" secondItem="hZW-9p-8Ju" secondAttribute="bottom" constant="8" id="m2Y-zF-aXU"/>
+                            <constraint firstItem="ohl-De-nnW" firstAttribute="top" secondItem="RX6-7I-NU3" secondAttribute="bottom" constant="53" id="oHE-af-ve3"/>
+                            <constraint firstItem="yRa-Af-cXi" firstAttribute="leading" secondItem="5kV-7K-goO" secondAttribute="leadingMargin" id="pVg-Rb-yzt"/>
+                            <constraint firstItem="G7l-bA-jtn" firstAttribute="leading" secondItem="5kV-7K-goO" secondAttribute="leadingMargin" id="rHm-Xu-xKv"/>
+                            <constraint firstItem="30e-eM-5wa" firstAttribute="leading" secondItem="5kV-7K-goO" secondAttribute="leading" constant="20" id="v4n-ep-Wah"/>
+                            <constraint firstItem="39r-un-8sG" firstAttribute="top" secondItem="OVy-XM-x57" secondAttribute="bottom" constant="32" id="vI4-kO-uuq"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="done" destination="RX6-7I-NU3" id="nkM-nO-qdf"/>
+                        <outlet property="finalPart" destination="OVy-XM-x57" id="kfW-B5-WWY"/>
+                        <outlet property="part1" destination="30e-eM-5wa" id="ugE-cp-R5G"/>
+                        <outlet property="part10" destination="yRa-Af-cXi" id="48W-IP-9ZS"/>
+                        <outlet property="part2" destination="1BA-uS-V6X" id="Ach-wA-pcY"/>
+                        <outlet property="part3" destination="yFp-qQ-AJH" id="Fjq-u3-QEY"/>
+                        <outlet property="part4" destination="GHr-8u-tc9" id="RvL-Dx-JVH"/>
+                        <outlet property="part5" destination="bGr-85-bwP" id="e8o-N5-TBm"/>
+                        <outlet property="part6" destination="f0r-pm-avb" id="h0O-3e-EUt"/>
+                        <outlet property="part7" destination="G7l-bA-jtn" id="rqZ-yz-mUF"/>
+                        <outlet property="part8" destination="hZW-9p-8Ju" id="P6m-ho-jBt"/>
+                        <outlet property="part9" destination="Nhd-k4-bHn" id="fWX-E2-Z8f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4S2-fg-LVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="eY4-ON-b3u">
+                    <connections>
+                        <action selector="action1:" destination="rRx-tm-gw5" id="oWE-Jn-yQ7"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="5FO-YE-k0m">
+                    <connections>
+                        <action selector="action2:" destination="rRx-tm-gw5" id="If8-AY-NZA"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ZhE-nG-McO">
+                    <connections>
+                        <action selector="action3:" destination="rRx-tm-gw5" id="WCa-d5-rP3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="haj-kz-O6M">
+                    <connections>
+                        <action selector="action4:" destination="rRx-tm-gw5" id="MvK-7n-Qk1"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="q6s-67-Dhq">
+                    <connections>
+                        <action selector="action5:" destination="rRx-tm-gw5" id="q78-nd-Tqm"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="jVq-4G-94g">
+                    <connections>
+                        <action selector="action6:" destination="rRx-tm-gw5" id="kL4-W6-dhe"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ktF-7A-GyY">
+                    <connections>
+                        <action selector="action7:" destination="rRx-tm-gw5" id="AtU-vq-a3N"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dgE-II-a4X">
+                    <connections>
+                        <action selector="action8:" destination="rRx-tm-gw5" id="QgO-Vs-NpA"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Ibv-DA-S0y">
+                    <connections>
+                        <action selector="action9:" destination="rRx-tm-gw5" id="ZoZ-fV-jNf"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="fBU-6C-7Vf">
+                    <connections>
+                        <action selector="returnToMain:" destination="rRx-tm-gw5" id="f5s-4y-7BS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="REo-lV-VVY">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" id="z7D-fh-b6Q"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="81Y-H8-Kml">
+                    <connections>
+                        <action selector="action10:" destination="rRx-tm-gw5" id="hO1-kp-4vh"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="936" y="211"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yTf-9h-0FN"/>
+    </inferredMetricsTieBreakers>
 </document>

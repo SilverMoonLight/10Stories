@@ -11,5 +11,7 @@
 @interface ViewController : UIViewController
 
 
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *books;
+@property (nonatomic) int *num;
 @end
 

@@ -15,6 +15,8 @@
 		01F4C0081C14A4AC00FCC62B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F4C0061C14A4AC00FCC62B /* LaunchScreen.storyboard */; };
 		01F4C0131C14A4AC00FCC62B /* _0StoriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F4C0121C14A4AC00FCC62B /* _0StoriesTests.m */; };
 		01F4C01E1C14A4AC00FCC62B /* _0StoriesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F4C01D1C14A4AC00FCC62B /* _0StoriesUITests.m */; };
+		01F4C02D1C14A4DF00FCC62B /* Stories.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F4C02C1C14A4DF00FCC62B /* Stories.m */; };
+		01F4C0301C15046000FCC62B /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F4C02F1C15046000FCC62B /* StoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		01F4C0191C14A4AC00FCC62B /* 10StoriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 10StoriesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F4C01D1C14A4AC00FCC62B /* _0StoriesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _0StoriesUITests.m; sourceTree = "<group>"; };
 		01F4C01F1C14A4AC00FCC62B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01F4C02B1C14A4DF00FCC62B /* Stories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stories.h; sourceTree = "<group>"; };
+		01F4C02C1C14A4DF00FCC62B /* Stories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stories.m; sourceTree = "<group>"; };
+		01F4C02E1C15046000FCC62B /* StoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryViewController.h; sourceTree = "<group>"; };
+		01F4C02F1C15046000FCC62B /* StoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,10 @@
 				01F4C0041C14A4AC00FCC62B /* Assets.xcassets */,
 				01F4C0061C14A4AC00FCC62B /* LaunchScreen.storyboard */,
 				01F4C0091C14A4AC00FCC62B /* Info.plist */,
+				01F4C02B1C14A4DF00FCC62B /* Stories.h */,
+				01F4C02C1C14A4DF00FCC62B /* Stories.m */,
+				01F4C02E1C15046000FCC62B /* StoryViewController.h */,
+				01F4C02F1C15046000FCC62B /* StoryViewController.m */,
 				01F4BFF81C14A4AC00FCC62B /* Supporting Files */,
 			);
 			path = 10Stories;
@@ -271,6 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				01F4C0001C14A4AC00FCC62B /* ViewController.m in Sources */,
+				01F4C02D1C14A4DF00FCC62B /* Stories.m in Sources */,
+				01F4C0301C15046000FCC62B /* StoryViewController.m in Sources */,
 				01F4BFFD1C14A4AC00FCC62B /* AppDelegate.m in Sources */,
 				01F4BFFA1C14A4AC00FCC62B /* main.m in Sources */,
 			);
@@ -498,6 +510,7 @@
 				01F4C0241C14A4AC00FCC62B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01F4C0251C14A4AC00FCC62B /* Build configuration list for PBXNativeTarget "10StoriesTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +519,7 @@
 				01F4C0271C14A4AC00FCC62B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01F4C0281C14A4AC00FCC62B /* Build configuration list for PBXNativeTarget "10StoriesUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +528,7 @@
 				01F4C02A1C14A4AC00FCC62B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
